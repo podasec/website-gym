@@ -1,0 +1,79 @@
+# Power Gym – Apache configuration
+Options -Indexes
+
+# -------------------------------------------------------
+# Rewrite engine
+# -------------------------------------------------------
+RewriteEngine On
+
+# Redirect a HTTPS (attivare in produzione)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Blocca accesso diretto ai file sensibili
+<FilesMatch "\.(sql|log|env|ini|bak|sh|git)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# -------------------------------------------------------
+# Protegge directory sensibili
+# -------------------------------------------------------
+<IfModule mod_rewrite.c>
+    # Blocca navigazione nella directory database
+    RewriteRule ^database/.*$ - [F,L]
+
+    # Blocca navigazione nella directory uploads (solo via URL diretto ai file è OK)
+    # RewriteRule ^uploads/$ - [F,L]
+</IfModule>
+
+# -------------------------------------------------------
+# Headers di sicurezza
+# -------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# -------------------------------------------------------
+# Prevent script execution in uploads
+# -------------------------------------------------------
+<IfModule mod_php.c>
+    <Directory "uploads">
+        php_flag engine off
+    </Directory>
+</IfModule>
+
+# -------------------------------------------------------
+# Charset e tipi MIME corretti
+# -------------------------------------------------------
+AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+    AddType application/json .json
+    AddType text/css          .css
+    AddType application/javascript .js
+</IfModule>
+
+# -------------------------------------------------------
+# Compressione (opzionale)
+# -------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
+</IfModule>
+
+# -------------------------------------------------------
+# Cache statica per asset
+# -------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css                  "access plus 1 month"
+    ExpiresByType application/javascript    "access plus 1 month"
+    ExpiresByType image/png                 "access plus 3 months"
+    ExpiresByType image/jpeg                "access plus 3 months"
+    ExpiresByType image/svg+xml             "access plus 1 month"
+    ExpiresByType image/webp                "access plus 3 months"
+</IfModule>
