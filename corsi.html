@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scopri tutti i corsi di Power Gym Milano: Boxe, Muay Thai, BJJ, MMA, Fitness Funzionale e Yoga Combattivo. Per ogni livello, dal principiante all'agonista.">
+  <meta name="theme-color" content="#e63946">
+  <title>I Nostri Corsi | Power Gym Milano</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo" aria-label="Power Gym – Homepage">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#e63946"/>
+            <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-main">POWER</span>
+            <span class="logo-sub">GYM</span>
+          </span>
+        </a>
+
+        <ul class="navbar-nav" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="corsi.html"       class="nav-link active">Corsi</a></li>
+          <li><a href="istruttori.html"  class="nav-link">Istruttori</a></li>
+          <li><a href="contatti.html"    class="nav-link">Contatti</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <a href="login.html" class="btn-login">ACCEDI</a>
+          <a href="index.html#cta-form" class="btn btn-primary btn-sm">ISCRIVITI ORA</a>
+        </div>
+
+        <button class="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+      <a href="index.html"      class="nav-link">Home</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="corsi.html"      class="nav-link active">Corsi</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="istruttori.html" class="nav-link">Istruttori</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="contatti.html"   class="nav-link">Contatti</a>
+      <div class="mobile-nav-actions">
+        <a href="login.html"          class="btn btn-outline">ACCEDI</a>
+        <a href="index.html#cta-form" class="btn btn-primary">ISCRIVITI ORA</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header" aria-label="Intestazione pagina corsi">
+      <div class="container page-header-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Corsi</span>
+        </nav>
+        <h1>I NOSTRI <span>CORSI</span></h1>
+        <p>Dalla prima cintura al titolo nazionale. Trova il percorso fatto per te.</p>
+      </div>
+    </section>
+
+    <!-- FILTER & COURSES -->
+    <section class="section-padding" aria-label="Catalogo corsi">
+      <div class="container">
+
+        <!-- Filter bar -->
+        <div class="filter-bar anim-fade-up" role="group" aria-label="Filtra per livello">
+          <button class="filter-btn active" data-filter="all"          type="button">Tutti i Corsi</button>
+          <button class="filter-btn"        data-filter="beginner"     type="button">Principiante</button>
+          <button class="filter-btn"        data-filter="intermediate" type="button">Intermedio</button>
+          <button class="filter-btn"        data-filter="advanced"     type="button">Avanzato</button>
+        </div>
+
+        <!-- Course grid -->
+        <div class="courses-grid stagger-children" id="courses-grid" style="grid-template-columns: repeat(3,1fr);">
+
+          <!-- BOXE -->
+          <article class="course-card-detailed" data-level="beginner" id="boxe" aria-label="Corso di Boxe">
+            <div class="course-img-placeholder" style="background: linear-gradient(135deg,#1a0505,#3d0f0f,#1a1a1a);">
+              <svg viewBox="0 0 64 64" fill="none" stroke="rgba(230,57,70,0.6)" stroke-width="1.5" aria-hidden="true">
+                <rect x="6" y="18" width="30" height="24" rx="8"/>
+                <path d="M36 24h4a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-4"/>
+                <path d="M6 24V18a10 10 0 0 1 10-10h18a10 10 0 0 1 10 10"/>
+              </svg>
+            </div>
+            <div class="course-card-body">
+              <div class="course-meta">
+                <span class="course-level beginner">Principiante → Avanzato</span>
+              </div>
+              <h2 class="course-title">BOXE</h2>
+              <div class="course-info-row">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Lun / Mer / Ven 07:00, 19:00 – Mer / Gio 20:30</span>
+              </div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;margin:var(--space-md) 0;flex:1;">
+                La boxe è l'arte nobile per eccellenza. Nel nostro corso imparerai le fondamenta
+                della tecnica pugistica: posizione, guardia, spostamenti, jab, cross, hook e
+                uppercut. Con la progressione del corso entrerai nel lavoro combinato, il bag
+                work, il pad work con i coach e lo sparring controllato.
+                <br><br>
+                Adatto a chiunque voglia migliorare la forma fisica, imparare a difendersi o
+                gareggiare a livello amatoriale e agonistico. Le classi sono divise per livello.
+              </p>
+              <div class="course-price">€ 80 <span>/ mese</span></div>
+              <a href="index.html#cta-form" class="btn btn-primary">PRENOTA PROVA GRATUITA</a>
+            </div>
+          </article>
+
+          <!-- MUAY THAI -->
+          <article class="course-card-detailed" data-level="intermediate" id="muaythai" aria-label="Corso di Muay Thai">
+            <div class="course-img-placeholder" style="background: linear-gradient(135deg,#1a0a00,#3d2000,#1a1a1a);">
+              <svg viewBox="0 0 64 64" fill="none" stroke="rgba(244,162,97,0.6)" stroke-width="1.5" aria-hidden="true">
+                <circle cx="32" cy="14" r="7"/>
+                <path d="M18 28l-6 18M46 28l6 18M22 46h20M32 21v22"/>
+              </svg>
+            </div>
+            <div class="course-card-body">
+              <div class="course-meta">
+                <span class="course-level intermediate">Tutti i livelli</span>
+              </div>
+              <h2 class="course-title">MUAY THAI</h2>
+              <div class="course-info-row">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Lun / Mer / Ven 17:30 – Mar / Gio 20:30</span>
+              </div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;margin:var(--space-md) 0;flex:1;">
+                Il Muay Thai, o "Arte degli Otto Arti", utilizza pugni, calci, gomitate e
+                ginocchiate. È una delle discipline da combattimento più complete e fisicamente
+                impegnative al mondo. Il nostro corso segue la metodologia delle palestre
+                tradizionali thailandesi, adattata all'approccio europeo moderno.
+                <br><br>
+                Imparerai le combinazioni fondamentali, il clinch, la gestione della distanza
+                e la difesa. Progressivamente introdurremo sparring tecnico supervisionato.
+              </p>
+              <div class="course-price">€ 85 <span>/ mese</span></div>
+              <a href="index.html#cta-form" class="btn btn-primary">PRENOTA PROVA GRATUITA</a>
+            </div>
+          </article>
+
+          <!-- BJJ -->
+          <article class="course-card-detailed" data-level="beginner" id="bjj" aria-label="Corso di Brazilian Jiu-Jitsu">
+            <div class="course-img-placeholder" style="background: linear-gradient(135deg,#000d1a,#00203d,#1a1a1a);">
+              <svg viewBox="0 0 64 64" fill="none" stroke="rgba(100,180,255,0.5)" stroke-width="1.5" aria-hidden="true">
+                <path d="M12 32c0-11 9-20 20-20s20 9 20 20"/>
+                <path d="M12 32c4 7 11 12 20 14 9-2 16-7 20-14"/>
+                <circle cx="22" cy="42" r="4"/>
+                <circle cx="42" cy="42" r="4"/>
+              </svg>
+            </div>
+            <div class="course-card-body">
+              <div class="course-meta">
+                <span class="course-level beginner">Principiante → Agonista</span>
+              </div>
+              <h2 class="course-title">BJJ</h2>
+              <div class="course-info-row">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mar / Gio 17:30 e 20:30 – Sab 09:30</span>
+              </div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;margin:var(--space-md) 0;flex:1;">
+                Il Brazilian Jiu-Jitsu è la lotta a terra per eccellenza. Basato su leve
+                articolari, strangolamenti e posizioni dominanti, permette a un praticante più
+                piccolo di controllare e sottomettere avversari fisicamente superiori.
+                <br><br>
+                Il programma è strutturato sullo sviluppo delle posizioni (guardia, mount,
+                back), transizioni, sweep e submission. Include classi Gi (con kimono) e
+                No-Gi. Open Mat il sabato mattina per rolling libero.
+              </p>
+              <div class="course-price">€ 90 <span>/ mese</span></div>
+              <a href="index.html#cta-form" class="btn btn-primary">PRENOTA PROVA GRATUITA</a>
+            </div>
+          </article>
+
+          <!-- MMA -->
+          <article class="course-card-detailed" data-level="advanced" id="mma" aria-label="Corso di MMA">
+            <div class="course-img-placeholder" style="background: linear-gradient(135deg,#1a0d0a,#3d1a10,#1a1a1a);">
+              <svg viewBox="0 0 64 64" fill="none" stroke="rgba(230,57,70,0.5)" stroke-width="1.5" aria-hidden="true">
+                <polygon points="32 4 58 18 58 46 32 60 6 46 6 18"/>
+                <path d="M32 4v56M6 18l52 28M58 18L6 46"/>
+              </svg>
+            </div>
+            <div class="course-card-body">
+              <div class="course-meta">
+                <span class="course-level advanced">Intermedio → Avanzato</span>
+              </div>
+              <h2 class="course-title">MMA</h2>
+              <div class="course-info-row">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mar / Gio 19:00 – Lun / Ven 20:30</span>
+              </div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;margin:var(--space-md) 0;flex:1;">
+                Le Mixed Martial Arts sono la sintesi di tutte le discipline da combattimento.
+                Il nostro corso MMA è riservato ad atleti con già una base in almeno uno sport
+                da combattimento (consigliato almeno 6 mesi di esperienza).
+                <br><br>
+                Il programma integra striking (boxe, Muay Thai), wrestling (takedown, sprawl,
+                clinch), grappling (BJJ, submission wrestling) e lavoro di transizione
+                piedi-terra. Preparazione sia per atleti amatoriali che agonisti professionisti.
+              </p>
+              <div class="course-price">€ 100 <span>/ mese</span></div>
+              <a href="index.html#cta-form" class="btn btn-primary">PRENOTA PROVA GRATUITA</a>
+            </div>
+          </article>
+
+          <!-- FITNESS FUNZIONALE -->
+          <article class="course-card-detailed" data-level="beginner" id="fitness" aria-label="Corso di Fitness Funzionale">
+            <div class="course-img-placeholder" style="background: linear-gradient(135deg,#0a1a0a,#1a3a1a,#1a1a1a);">
+              <svg viewBox="0 0 64 64" fill="none" stroke="rgba(74,222,128,0.5)" stroke-width="1.5" aria-hidden="true">
+                <rect x="4" y="26" width="8" height="12" rx="2"/>
+                <rect x="52" y="26" width="8" height="12" rx="2"/>
+                <rect x="16" y="22" width="8" height="20" rx="2"/>
+                <rect x="40" y="22" width="8" height="20" rx="2"/>
+                <line x1="12" y1="32" x2="16" y2="32"/>
+                <line x1="48" y1="32" x2="52" y2="32"/>
+                <line x1="24" y1="32" x2="40" y2="32"/>
+              </svg>
+            </div>
+            <div class="course-card-body">
+              <div class="course-meta">
+                <span class="course-level beginner">Tutti i livelli</span>
+              </div>
+              <h2 class="course-title">FITNESS FUNZIONALE</h2>
+              <div class="course-info-row">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Lun–Ven 07:00 e 12:00 – Ven 17:30</span>
+              </div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;margin:var(--space-md) 0;flex:1;">
+                Il Fitness Funzionale di Power Gym è progettato per chi vuole costruire un
+                corpo atletico e performante ispirandosi ai movimenti delle arti marziali.
+                Sessioni ad alta intensità che combinano forza, resistenza metabolica,
+                agilità, mobilità articolare e coordinazione.
+                <br><br>
+                Ideale sia per chi inizia sia per atleti da combattimento che cercano un
+                complemento al loro allenamento principale. Classi da 60 minuti con
+                coaching personalizzato. Nessuna attrezzatura personale richiesta.
+              </p>
+              <div class="course-price">€ 70 <span>/ mese</span></div>
+              <a href="index.html#cta-form" class="btn btn-primary">PRENOTA PROVA GRATUITA</a>
+            </div>
+          </article>
+
+          <!-- YOGA COMBATTIVO -->
+          <article class="course-card-detailed" data-level="beginner" id="yoga" aria-label="Corso di Yoga Combattivo">
+            <div class="course-img-placeholder" style="background: linear-gradient(135deg,#0d0a1a,#1a1040,#1a1a1a);">
+              <svg viewBox="0 0 64 64" fill="none" stroke="rgba(180,120,255,0.5)" stroke-width="1.5" aria-hidden="true">
+                <circle cx="32" cy="12" r="5"/>
+                <path d="M32 17v14M20 24l12 4 12-4M20 26l6 14h12l6-14"/>
+                <path d="M26 40l-6 10M38 40l6 10"/>
+              </svg>
+            </div>
+            <div class="course-card-body">
+              <div class="course-meta">
+                <span class="course-level beginner">Principiante</span>
+              </div>
+              <h2 class="course-title">YOGA COMBATTIVO</h2>
+              <div class="course-info-row">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mar / Gio 09:30</span>
+              </div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;margin:var(--space-md) 0;flex:1;">
+                Lo Yoga Combattivo è un programma unico che adatta le pratiche yoga
+                tradizionali alle esigenze specifiche degli atleti da combattimento.
+                Focus su flessibilità, forza isometrica, mobilità articolare, respirazione
+                e recupero attivo.
+                <br><br>
+                Particolarmente indicato come complemento per praticanti di BJJ, MMA e
+                Muay Thai. Le sessioni includono sequenze di mobilità specifiche per le
+                articolazioni più sollecitate nel combat sport (anche, spalle, colonna).
+                Anche per chi non ha mai praticato arti marziali.
+              </p>
+              <div class="course-price">€ 60 <span>/ mese</span></div>
+              <a href="index.html#cta-form" class="btn btn-primary">PRENOTA PROVA GRATUITA</a>
+            </div>
+          </article>
+
+        </div>
+        <!-- End courses grid -->
+
+        <!-- Info pricing -->
+        <div class="anim-fade-up" style="margin-top:3rem;background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-2xl);text-align:center;">
+          <span class="section-label">Abbonamenti &amp; Pacchetti</span>
+          <h3 class="section-title" style="font-size:var(--fs-2xl);">RISPARMIA CON I <span>PACCHETTI</span></h3>
+          <div class="divider"></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xl);margin-top:var(--space-xl);">
+            <div style="padding:var(--space-xl);background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-md);">
+              <div style="font-family:var(--font-heading);font-size:var(--fs-2xl);color:var(--color-accent);">MENSILE</div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin:var(--space-md) 0;">Accesso illimitato a 1 disciplina</p>
+              <div style="font-size:var(--fs-lg);font-weight:700;">da € 60 <span style="font-size:var(--fs-sm);color:var(--color-text-dim);">/mese</span></div>
+            </div>
+            <div style="padding:var(--space-xl);background:var(--color-bg);border:2px solid var(--color-accent);border-radius:var(--radius-md);position:relative;">
+              <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--color-accent);padding:0.2rem 1rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:700;">PIÙ POPOLARE</div>
+              <div style="font-family:var(--font-heading);font-size:var(--fs-2xl);color:var(--color-accent);">TRIMESTRALE</div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin:var(--space-md) 0;">Accesso illimitato a 2 discipline</p>
+              <div style="font-size:var(--fs-lg);font-weight:700;">da € 160 <span style="font-size:var(--fs-sm);color:var(--color-text-dim);">/3 mesi</span></div>
+            </div>
+            <div style="padding:var(--space-xl);background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-md);">
+              <div style="font-family:var(--font-heading);font-size:var(--fs-2xl);color:var(--color-accent);">ANNUALE</div>
+              <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin:var(--space-md) 0;">Accesso illimitato a tutti i corsi</p>
+              <div style="font-size:var(--fs-lg);font-weight:700;">da € 580 <span style="font-size:var(--fs-sm);color:var(--color-text-dim);">/anno</span></div>
+            </div>
+          </div>
+          <p style="color:var(--color-text-dim);font-size:var(--fs-sm);margin-top:var(--space-lg);">
+            Tutti i prezzi includono IVA. Prima lezione sempre gratuita.
+            <a href="contatti.html" style="color:var(--color-accent);">Contattaci</a> per informazioni su corsi privati e pacchetti famiglia.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Power Gym Homepage">
+            <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#e63946"/><path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/></svg>
+            <span style="font-family:var(--font-heading);letter-spacing:0.08em;">POWER <span style="color:var(--color-accent)">GYM</span></span>
+          </a>
+          <p>La palestra di arti marziali e fighting sports numero uno a Milano. Alleniamo corpo e mente dal 2009.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Link Rapidi</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="corsi.html">I Nostri Corsi</a>
+            <a href="istruttori.html">Il Nostro Team</a>
+            <a href="contatti.html">Contattaci</a>
+            <a href="login.html">Area Riservata</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>I Corsi</h4>
+          <nav class="footer-links">
+            <a href="#boxe">Boxe</a>
+            <a href="#muaythai">Muay Thai</a>
+            <a href="#bjj">BJJ</a>
+            <a href="#mma">MMA</a>
+            <a href="#fitness">Fitness Funzionale</a>
+            <a href="#yoga">Yoga Combattivo</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <address class="footer-contact-list" style="font-style:normal;">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Via Roma 123, 20121 Milano</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.16 6.16l1-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+390212345678">+39 02 1234567</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Power Gym S.r.l. Tutti i diritti riservati.</p>
+        <nav aria-label="Link legali"><a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Cookie</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Torna in cima alla pagina" type="button">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/form-validation.js" defer></script>
+</body>
+</html>

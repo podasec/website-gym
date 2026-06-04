@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Power Gym – Palestra di arti marziali, fitness e combattimento a Milano. Boxe, Muay Thai, BJJ, MMA e molto altro. Prima lezione gratuita!">
+  <meta name="theme-color" content="#e63946">
+  <title>Power Gym Milano | Arti Marziali &amp; Fighting Sports</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+      <div class="navbar-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="navbar-logo" aria-label="Power Gym – Homepage">
+          <!-- Inline SVG boxing glove icon -->
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#e63946"/>
+            <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+            <path d="M13 17.5v.5H12a2 2 0 0 0-2 2v2c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3" stroke="rgba(0,0,0,0.2)" stroke-width="0.5"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-main">POWER</span>
+            <span class="logo-sub">GYM</span>
+          </span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <ul class="navbar-nav" role="list">
+          <li><a href="index.html"       class="nav-link active">Home</a></li>
+          <li><a href="corsi.html"       class="nav-link">Corsi</a></li>
+          <li><a href="istruttori.html"  class="nav-link">Istruttori</a></li>
+          <li><a href="contatti.html"    class="nav-link">Contatti</a></li>
+        </ul>
+
+        <!-- CTA buttons -->
+        <div class="navbar-actions">
+          <a href="login.html" class="btn-login" aria-label="Accedi al tuo account">ACCEDI</a>
+          <a href="#cta-form"  class="btn btn-primary btn-sm">ISCRIVITI ORA</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile navigation overlay -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+      <a href="index.html"      class="nav-link active">Home</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="corsi.html"      class="nav-link">Corsi</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="istruttori.html" class="nav-link">Istruttori</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="contatti.html"   class="nav-link">Contatti</a>
+      <div class="mobile-nav-actions">
+        <a href="login.html"  class="btn btn-outline">ACCEDI</a>
+        <a href="#cta-form"   class="btn btn-primary">ISCRIVITI ORA</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section class="hero" aria-label="Hero">
+      <!-- Background -->
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <!-- Decorative animated shapes -->
+      <div class="hero-animated-shapes" aria-hidden="true">
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+      </div>
+
+      <!-- Overlay -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-badge" aria-label="Palestra aperta">
+          Milano &bull; Via Roma 123 &bull; Aperto Ogni Giorno
+        </div>
+
+        <h1 class="hero-title">
+          FORGIA IL TUO CORPO.
+          <span class="accent-line">DOMINA LA TUA MENTE.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Arti marziali, fitness e combattimento per tutti i livelli.
+          Unisciti alla famiglia Power Gym e trasforma te stesso.
+        </p>
+
+        <div class="hero-actions">
+          <a href="corsi.html" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
+            SCOPRI I CORSI
+          </a>
+          <a href="#cta-form" class="btn btn-outline btn-lg">
+            PRENOTA PROVA GRATUITA
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scorri</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STATS BAR
+    ============================================================ -->
+    <section class="stats-bar" aria-label="I nostri numeri">
+      <div class="container">
+        <div class="stats-grid stagger-children">
+          <div class="stat-item">
+            <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+            <div class="stat-label">Anni di Esperienza</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="500" data-suffix="+">0+</div>
+            <div class="stat-label">Atleti Attivi</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">Istruttori Certificati</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CHI SIAMO
+    ============================================================ -->
+    <section class="about section-padding" id="chi-siamo" aria-label="Chi siamo">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Visual -->
+          <div class="about-visual anim-slide-left">
+            <div class="about-img-placeholder" role="img" aria-label="Palestra Power Gym">
+              <svg viewBox="0 0 80 80" fill="currentColor" aria-hidden="true">
+                <path d="M10 40h8v-12a4 4 0 0 1 8 0v12h8v-8h8v8h8v-12a4 4 0 0 1 8 0v12h8a2 2 0 0 1 0 4H10a2 2 0 0 1 0-4z"/>
+                <rect x="18" y="44" width="4" height="8" rx="2"/>
+                <rect x="58" y="44" width="4" height="8" rx="2"/>
+              </svg>
+            </div>
+            <div class="about-badge-img">
+              <div class="badge-num">15+</div>
+              <div class="badge-text">Anni di Eccellenza</div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content anim-slide-right">
+            <span class="section-label">Chi Siamo</span>
+            <h2 class="section-title">LA TUA PALESTRA DI <span>FIDUCIA</span></h2>
+            <div class="divider divider-left"></div>
+
+            <p class="about-description">
+              Power Gym nasce nel 2009 con un obiettivo chiaro: portare le arti marziali e il
+              combattimento sportivo di livello professionistico a chiunque voglia migliorarsi.
+              Negli anni abbiamo formato campioni regionali, nazionali e internazionali, ma la
+              nostra vera soddisfazione è vedere ogni singolo atleta crescere, indipendentemente
+              dal livello di partenza.
+            </p>
+            <p class="about-description">
+              La nostra palestra è un luogo di rispetto, disciplina e crescita personale. Che tu
+              voglia iniziare per la prima volta o perfezionare la tua tecnica, troverai qui
+              l'ambiente ideale.
+            </p>
+
+            <ul class="about-features">
+              <li class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                Istruttori certificati FIJLKAM, FIAM e internazionali
+              </li>
+              <li class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                Oltre 800 m² di spazio allenamento attrezzato
+              </li>
+              <li class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                Classi per bambini, adulti e agonisti
+              </li>
+              <li class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                Programmi personalizzati e supporto nutrizionale
+              </li>
+            </ul>
+
+            <a href="corsi.html" class="btn btn-primary">
+              SCOPRI I NOSTRI CORSI
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         I NOSTRI CORSI
+    ============================================================ -->
+    <section class="courses section-padding" id="corsi" aria-label="I nostri corsi">
+      <div class="container">
+        <div class="text-center anim-fade-up">
+          <span class="section-label">Cosa Offriamo</span>
+          <h2 class="section-title">I NOSTRI <span>CORSI</span></h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">
+            Dalla boxe tradizionale alle arti marziali miste, abbiamo il corso
+            perfetto per il tuo obiettivo e il tuo livello.
+          </p>
+        </div>
+
+        <div class="courses-grid stagger-children">
+
+          <!-- BOXE -->
+          <article class="course-card" aria-label="Corso di Boxe">
+            <div class="course-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="4" y="8" width="16" height="14" rx="4"/>
+                <path d="M20 12h2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/>
+                <path d="M4 12V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4"/>
+              </svg>
+            </div>
+            <span class="course-level beginner">Principiante → Avanzato</span>
+            <h3 class="course-title">BOXE</h3>
+            <p class="course-desc">
+              L'arte nobile per eccellenza. Impara guardia, jab, cross, hook e uppercut.
+              Migliora coordinazione, resistenza e autodifesa in un ambiente professionale.
+            </p>
+            <a href="corsi.html#boxe" class="btn btn-outline-accent btn-sm">Scopri di più</a>
+          </article>
+
+          <!-- MUAY THAI -->
+          <article class="course-card" aria-label="Corso di Muay Thai">
+            <div class="course-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="14" cy="8" r="4"/>
+                <path d="M8 14l-4 8M20 14l4 8M10 22h8M14 12v10"/>
+              </svg>
+            </div>
+            <span class="course-level intermediate">Tutti i livelli</span>
+            <h3 class="course-title">MUAY THAI</h3>
+            <p class="course-desc">
+              L'arte degli otto arti. Pugni, calci, gomitate e ginocchiate per un allenamento
+              completo. Tradizione thailandese con approccio moderno e sicuro.
+            </p>
+            <a href="corsi.html#muaythai" class="btn btn-outline-accent btn-sm">Scopri di più</a>
+          </article>
+
+          <!-- BJJ -->
+          <article class="course-card" aria-label="Corso di Brazilian Jiu-Jitsu">
+            <div class="course-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 14c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+                <path d="M6 14c2 3 5 5 8 6 3-1 6-3 8-6"/>
+                <circle cx="10" cy="18" r="2"/>
+                <circle cx="18" cy="18" r="2"/>
+              </svg>
+            </div>
+            <span class="course-level beginner">Principiante → Agonista</span>
+            <h3 class="course-title">BJJ</h3>
+            <p class="course-desc">
+              Brazilian Jiu-Jitsu: la lotta a terra che ha rivoluzionato il combat sport.
+              Leve, strangolamenti e submission per dominare qualsiasi avversario.
+            </p>
+            <a href="corsi.html#bjj" class="btn btn-outline-accent btn-sm">Scopri di più</a>
+          </article>
+
+          <!-- MMA -->
+          <article class="course-card" aria-label="Corso di MMA">
+            <div class="course-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="14 3 25 9 25 19 14 25 3 19 3 9"/>
+                <path d="M14 3v22M3 9l22 10M25 9L3 19"/>
+              </svg>
+            </div>
+            <span class="course-level advanced">Intermedio → Avanzato</span>
+            <h3 class="course-title">MMA</h3>
+            <p class="course-desc">
+              Mixed Martial Arts: la sintesi di tutte le arti marziali. Percorso strutturato
+              che integra striking, wrestling, grappling e clinch work.
+            </p>
+            <a href="corsi.html#mma" class="btn btn-outline-accent btn-sm">Scopri di più</a>
+          </article>
+
+          <!-- FITNESS FUNZIONALE -->
+          <article class="course-card" aria-label="Corso di Fitness Funzionale">
+            <div class="course-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="12" width="4" height="4" rx="1"/>
+                <rect x="22" y="12" width="4" height="4" rx="1"/>
+                <rect x="8" y="10" width="4" height="8" rx="1"/>
+                <rect x="16" y="10" width="4" height="8" rx="1"/>
+                <line x1="6" y1="14" x2="8" y2="14"/>
+                <line x1="20" y1="14" x2="22" y2="14"/>
+                <line x1="12" y1="14" x2="16" y2="14"/>
+              </svg>
+            </div>
+            <span class="course-level beginner">Tutti i livelli</span>
+            <h3 class="course-title">FITNESS FUNZIONALE</h3>
+            <p class="course-desc">
+              Allenamento ad alta intensità ispirato ai movimenti marziali. Forza, resistenza,
+              agilità e mobilità per un corpo atletico e performante.
+            </p>
+            <a href="corsi.html#fitness" class="btn btn-outline-accent btn-sm">Scopri di più</a>
+          </article>
+
+          <!-- YOGA COMBATTIVO -->
+          <article class="course-card" aria-label="Corso di Yoga Combattivo">
+            <div class="course-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="14" cy="6" r="2"/>
+                <path d="M14 8v6M8 12l6 2 6-2M8 14l3 6h6l3-6"/>
+                <path d="M11 20l-3 4M17 20l3 4"/>
+              </svg>
+            </div>
+            <span class="course-level beginner">Principiante</span>
+            <h3 class="course-title">YOGA COMBATTIVO</h3>
+            <p class="course-desc">
+              Il metodo perfetto per aumentare flessibilità, recupero e concentrazione mentale.
+              Yoga adattato alle esigenze degli atleti da combattimento.
+            </p>
+            <a href="corsi.html#yoga" class="btn btn-outline-accent btn-sm">Scopri di più</a>
+          </article>
+
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="corsi.html" class="btn btn-primary btn-lg">VEDI TUTTI I CORSI</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PERCHÉ SCEGLIERCI
+    ============================================================ -->
+    <section class="why-us section-padding" id="perche-noi" aria-label="Perché sceglierci">
+      <div class="container">
+        <div class="text-center anim-fade-up">
+          <span class="section-label">Il Vantaggio Power Gym</span>
+          <h2 class="section-title">PERCHÉ <span>SCEGLIERCI</span></h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="features-grid stagger-children">
+
+          <!-- Feature 1 -->
+          <div class="feature-box">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Istruttori Certificati</h3>
+            <p class="feature-text">
+              Tutti i nostri coach sono certificati dalle federazioni nazionali e internazionali,
+              con esperienza agonistica e decenni di insegnamento.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-box">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="4" height="10" rx="1"/>
+                <rect x="18" y="7" width="4" height="10" rx="1"/>
+                <rect x="7" y="5" width="4" height="14" rx="1"/>
+                <rect x="13" y="5" width="4" height="14" rx="1"/>
+                <line x1="6" y1="12" x2="7" y2="12"/>
+                <line x1="17" y1="12" x2="18" y2="12"/>
+                <line x1="11" y1="12" x2="13" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Attrezzatura Professionale</h3>
+            <p class="feature-text">
+              Sacchi professionali, ring da boxe, tatami omologato, zona pesi e cardio.
+              Tutto aggiornato agli standard delle palestre agonistiche di alto livello.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-box">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Orari Flessibili</h3>
+            <p class="feature-text">
+              Corsi mattutini, pomeridiani e serali, dal lunedì alla domenica.
+              Abbonamenti mensili e trimestrali adatti a ogni stile di vita.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-box">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Prima Lezione Gratuita</h3>
+            <p class="feature-text">
+              Prova qualsiasi corso senza impegno. La prima lezione è completamente gratuita
+              per permetterti di trovare la disciplina che fa per te.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS SLIDER
+    ============================================================ -->
+    <section class="testimonials section-padding" aria-label="Recensioni degli atleti">
+      <div class="container">
+        <div class="text-center anim-fade-up">
+          <span class="section-label">Cosa Dicono di Noi</span>
+          <h2 class="section-title">LE <span>RECENSIONI</span></h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="slider-wrapper" role="region" aria-label="Carosello recensioni" aria-roledescription="carosello">
+          <div class="slider-track">
+
+            <!-- Slide 1 -->
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="Slide 1 di 3">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stelle su 5">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  "Ho iniziato il corso di Boxe due anni fa senza nessuna esperienza.
+                  Oggi mi alleno tre volte a settimana e ho partecipato ai miei primi tornei amatoriali.
+                  Il Coach Marco è eccezionale: tecnico, motivante e sempre disponibile.
+                  Power Gym ha letteralmente cambiato la mia vita."
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">LS</div>
+                  <div class="author-info">
+                    <div class="author-name">Luca Santini</div>
+                    <div class="author-role">Atleta Boxe &bull; 2 anni</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="Slide 2 di 3">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stelle su 5">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  "Come donna non ero sicura di trovare il mio spazio in una palestra di arti marziali.
+                  In Power Gym mi sono sentita accolta dal primo giorno. Il Muay Thai mi ha dato forza,
+                  sicurezza e una comunità meravigliosa. Consiglio assolutamente a chiunque."
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">GF</div>
+                  <div class="author-info">
+                    <div class="author-name">Giulia Ferrari</div>
+                    <div class="author-role">Atleta Muay Thai &bull; 3 anni</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="Slide 3 di 3">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stelle su 5">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+                </div>
+                <blockquote class="testimonial-text">
+                  "Sono qui da 4 anni e ho vinto 2 campionati regionali di BJJ. La qualità
+                  dell'insegnamento è superiore a molte palestre professionistiche. Il team
+                  è una vera famiglia: ci si supporta, ci si allena duro, ci si diverte.
+                  Power Gym non è solo una palestra, è uno stile di vita."
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">MR</div>
+                  <div class="author-info">
+                    <div class="author-name">Marco Ricci</div>
+                    <div class="author-role">Atleta BJJ &bull; Cintura Viola &bull; 4 anni</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <div class="slider-controls" role="group" aria-label="Controlli carosello">
+          <button class="slider-btn prev" aria-label="Recensione precedente" type="button">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="slider-dots" role="group" aria-label="Selezione slide"></div>
+          <button class="slider-btn next" aria-label="Recensione successiva" type="button">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ORARI
+    ============================================================ -->
+    <section class="schedule section-padding" id="orari" aria-label="Orari settimanali">
+      <div class="container">
+        <div class="text-center anim-fade-up">
+          <span class="section-label">Programmazione</span>
+          <h2 class="section-title">ORARI <span>SETTIMANALI</span></h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">Trova l'orario che si adatta alla tua giornata.</p>
+        </div>
+
+        <div class="schedule-table-wrapper anim-fade-up">
+          <table class="schedule-table" aria-label="Tabella orari corsi settimanali">
+            <caption class="sr-only">Orari dei corsi di Power Gym dalla settimana</caption>
+            <thead>
+              <tr>
+                <th scope="col">Fascia Oraria</th>
+                <th scope="col">Lun</th>
+                <th scope="col">Mar</th>
+                <th scope="col">Mer</th>
+                <th scope="col">Gio</th>
+                <th scope="col">Ven</th>
+                <th scope="col">Sab</th>
+                <th scope="col">Dom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07:00 – 09:00</td>
+                <td><span class="schedule-pill">Boxe</span></td>
+                <td>–</td>
+                <td><span class="schedule-pill">Boxe</span></td>
+                <td>–</td>
+                <td><span class="schedule-pill">Fitness</span></td>
+                <td><span class="schedule-pill orange">Muay Thai</span></td>
+                <td>–</td>
+              </tr>
+              <tr>
+                <td>09:30 – 11:30</td>
+                <td>–</td>
+                <td><span class="schedule-pill green">Yoga</span></td>
+                <td>–</td>
+                <td><span class="schedule-pill green">Yoga</span></td>
+                <td>–</td>
+                <td><span class="schedule-pill">BJJ</span></td>
+                <td><span class="schedule-pill">Open Mat</span></td>
+              </tr>
+              <tr>
+                <td>12:00 – 13:00</td>
+                <td><span class="schedule-pill">Fitness</span></td>
+                <td><span class="schedule-pill">Fitness</span></td>
+                <td><span class="schedule-pill">Fitness</span></td>
+                <td><span class="schedule-pill">Fitness</span></td>
+                <td><span class="schedule-pill">Fitness</span></td>
+                <td>–</td>
+                <td>–</td>
+              </tr>
+              <tr>
+                <td>17:30 – 19:00</td>
+                <td><span class="schedule-pill orange">Muay Thai</span></td>
+                <td><span class="schedule-pill">BJJ</span></td>
+                <td><span class="schedule-pill orange">Muay Thai</span></td>
+                <td><span class="schedule-pill">BJJ</span></td>
+                <td><span class="schedule-pill orange">Muay Thai</span></td>
+                <td>–</td>
+                <td>–</td>
+              </tr>
+              <tr>
+                <td>19:00 – 20:30</td>
+                <td><span class="schedule-pill">Boxe</span></td>
+                <td><span class="schedule-pill">MMA</span></td>
+                <td><span class="schedule-pill">Boxe</span></td>
+                <td><span class="schedule-pill">MMA</span></td>
+                <td><span class="schedule-pill">Boxe</span></td>
+                <td>–</td>
+                <td>–</td>
+              </tr>
+              <tr>
+                <td>20:30 – 22:00</td>
+                <td><span class="schedule-pill">MMA</span></td>
+                <td><span class="schedule-pill orange">Muay Thai</span></td>
+                <td><span class="schedule-pill">BJJ</span></td>
+                <td><span class="schedule-pill orange">Muay Thai</span></td>
+                <td><span class="schedule-pill">MMA</span></td>
+                <td>–</td>
+                <td>–</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-center text-muted" style="margin-top: 1.5rem; font-size: 0.875rem;">
+          * Gli orari possono subire variazioni. Controlla sempre la bacheca in palestra o contattaci.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINALE
+    ============================================================ -->
+    <section class="cta-section section-padding" id="cta-form" aria-label="Iscriviti">
+      <div class="container">
+        <div class="cta-content anim-fade-up">
+          <span class="section-label">Inizia Oggi</span>
+          <h2 class="cta-title">INIZIA OGGI IL TUO <span style="color:var(--color-accent)">PERCORSO</span></h2>
+          <p class="cta-subtitle">
+            Prenota la tua prova gratuita. Nessun impegno, solo una lezione che potrebbe cambiarti la vita.
+          </p>
+
+          <form id="cta-form" class="cta-form" novalidate aria-label="Form iscrizione prova gratuita">
+            <div class="form-group form-input">
+              <input
+                type="text"
+                id="cta-name"
+                name="name"
+                class="form-input"
+                placeholder="Il tuo nome"
+                data-rules="required,minLength:2"
+                aria-required="true"
+                aria-label="Il tuo nome"
+                autocomplete="given-name"
+              >
+            </div>
+            <div class="form-group form-input">
+              <input
+                type="email"
+                id="cta-email"
+                name="email"
+                class="form-input"
+                placeholder="La tua email"
+                data-rules="required,email"
+                aria-required="true"
+                aria-label="La tua email"
+                autocomplete="email"
+              >
+            </div>
+            <div class="form-group form-input">
+              <select
+                id="cta-course"
+                name="course"
+                class="form-input form-select"
+                data-rules="required"
+                aria-required="true"
+                aria-label="Corso di interesse"
+              >
+                <option value="">Corso di interesse…</option>
+                <option value="boxe">Boxe</option>
+                <option value="muaythai">Muay Thai</option>
+                <option value="bjj">BJJ</option>
+                <option value="mma">MMA</option>
+                <option value="fitness">Fitness Funzionale</option>
+                <option value="yoga">Yoga Combattivo</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              PRENOTA GRATIS
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+
+          <p class="text-muted" style="margin-top:1rem; font-size: 0.8rem;">
+            Nessuno spam. I tuoi dati sono al sicuro con noi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Power Gym Homepage">
+            <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="36" height="36" rx="8" fill="#e63946"/>
+              <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+            </svg>
+            <span style="font-family:var(--font-heading);letter-spacing:0.08em;">POWER <span style="color:var(--color-accent)">GYM</span></span>
+          </a>
+          <p>
+            La palestra di arti marziali e fighting sports numero uno a Milano.
+            Alleniamo corpo e mente dal 2009.
+          </p>
+          <div class="social-links" aria-label="Social media">
+            <!-- Instagram -->
+            <a href="#" class="social-link" aria-label="Instagram di Power Gym">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="social-link" aria-label="Facebook di Power Gym">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="social-link" aria-label="YouTube di Power Gym">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="social-link" aria-label="TikTok di Power Gym">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.41a8.16 8.16 0 0 0 4.78 1.52V7.48a4.85 4.85 0 0 1-1.01-.79z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Link Rapidi</h4>
+          <nav class="footer-links" aria-label="Link rapidi">
+            <a href="index.html">Home</a>
+            <a href="corsi.html">I Nostri Corsi</a>
+            <a href="istruttori.html">Il Nostro Team</a>
+            <a href="contatti.html">Contattaci</a>
+            <a href="login.html">Area Riservata</a>
+          </nav>
+        </div>
+
+        <!-- Corsi -->
+        <div class="footer-col">
+          <h4>I Corsi</h4>
+          <nav class="footer-links" aria-label="Corsi disponibili">
+            <a href="corsi.html#boxe">Boxe</a>
+            <a href="corsi.html#muaythai">Muay Thai</a>
+            <a href="corsi.html#bjj">BJJ</a>
+            <a href="corsi.html#mma">MMA</a>
+            <a href="corsi.html#fitness">Fitness Funzionale</a>
+            <a href="corsi.html#yoga">Yoga Combattivo</a>
+          </nav>
+        </div>
+
+        <!-- Contatti -->
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <address class="footer-contact-list" style="font-style:normal;">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Via Roma 123, 20121 Milano MI</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.16 6.16l1-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+390212345678">+39 02 1234567</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@powergym.it">info@powergym.it</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Lun–Ven 07:00–22:00<br>Sab 08:00–18:00<br>Dom 09:00–13:00</span>
+            </div>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Power Gym S.r.l. – P.IVA 12345678901. Tutti i diritti riservati.</p>
+        <nav aria-label="Link legali">
+          <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+          <a href="#">Cookie Policy</a> &nbsp;|&nbsp;
+          <a href="#">Termini di Servizio</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button class="scroll-top" aria-label="Torna in cima alla pagina" type="button">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Scripts (non-blocking) -->
+  <script src="js/main.js" defer></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/form-validation.js" defer></script>
+</body>
+</html>

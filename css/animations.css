@@ -1,0 +1,421 @@
+/* ============================================================
+   POWER GYM - Animations Stylesheet
+   animations.css
+   ============================================================ */
+
+/* ============================================================
+   1. KEYFRAME ANIMATIONS
+   ============================================================ */
+
+/* fadeInUp – element fades in while rising */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fadeInDown – element fades in while dropping */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fadeIn – simple opacity fade */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* slideInLeft – element slides in from the left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* slideInRight – element slides in from the right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* scaleIn – element scales up from 80% */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* pulse – breathing scale effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+/* glowPulse – pulsating red glow shadow */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(230, 57, 70, 0.3),
+                0 0 20px rgba(230, 57, 70, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.7),
+                0 0 50px rgba(230, 57, 70, 0.3);
+  }
+}
+
+/* glowPulseText – pulsating text shadow */
+@keyframes glowPulseText {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(230, 57, 70, 0.8),
+                 0 0 60px rgba(230, 57, 70, 0.4);
+  }
+}
+
+/* floatShape – gentle float for decorative shapes */
+@keyframes floatShape {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-20px) rotate(var(--rot, 0deg));
+  }
+}
+
+/* bounceDown – arrow bounce for scroll cue */
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+/* shimmer – loading skeleton shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+/* spin – rotating loader */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* lineExpand – underline expansion */
+@keyframes lineExpand {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* countUp – used as a trigger class for JS counters */
+@keyframes countUp {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* borderDraw – animated border trace */
+@keyframes borderDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ripple – click ripple effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   2. SCROLL-TRIGGERED ANIMATION CLASSES
+   Elements start invisible; JS adds .is-visible to trigger.
+   ============================================================ */
+
+/* Base state – hidden before trigger */
+.anim-fade-up,
+.anim-fade-in,
+.anim-slide-left,
+.anim-slide-right,
+.anim-scale-in {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.anim-fade-up {
+  transform: translateY(40px);
+}
+
+.anim-slide-left {
+  transform: translateX(-60px);
+}
+
+.anim-slide-right {
+  transform: translateX(60px);
+}
+
+.anim-scale-in {
+  transform: scale(0.85);
+}
+
+/* Triggered state – visible */
+.anim-fade-up.is-visible,
+.anim-fade-in.is-visible,
+.anim-slide-left.is-visible,
+.anim-slide-right.is-visible,
+.anim-scale-in.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-children.is-visible > *:nth-child(1)  { opacity: 1; transform: none; transition-delay: 0.05s; }
+.stagger-children.is-visible > *:nth-child(2)  { opacity: 1; transform: none; transition-delay: 0.15s; }
+.stagger-children.is-visible > *:nth-child(3)  { opacity: 1; transform: none; transition-delay: 0.25s; }
+.stagger-children.is-visible > *:nth-child(4)  { opacity: 1; transform: none; transition-delay: 0.35s; }
+.stagger-children.is-visible > *:nth-child(5)  { opacity: 1; transform: none; transition-delay: 0.45s; }
+.stagger-children.is-visible > *:nth-child(6)  { opacity: 1; transform: none; transition-delay: 0.55s; }
+.stagger-children.is-visible > *:nth-child(7)  { opacity: 1; transform: none; transition-delay: 0.65s; }
+.stagger-children.is-visible > *:nth-child(8)  { opacity: 1; transform: none; transition-delay: 0.75s; }
+
+/* ============================================================
+   3. UTILITY ANIMATION CLASSES (always active)
+   ============================================================ */
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+.animate-glow-text {
+  animation: glowPulseText 2.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatShape 6s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ============================================================
+   4. HERO SECTION ENTRY ANIMATIONS (CSS-driven, no JS)
+   ============================================================ */
+
+.hero-badge {
+  animation: fadeInDown 0.7s ease 0.2s both;
+}
+
+.hero-title {
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.hero-actions {
+  animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.hero-scroll {
+  animation: bounceDown 2s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* ============================================================
+   5. COUNTER ANIMATION
+   ============================================================ */
+
+.stat-number {
+  display: inline-block;
+}
+
+.stat-number.counting {
+  animation: countUp 0.1s ease;
+}
+
+/* ============================================================
+   6. CARD HOVER MICROINTERACTIONS
+   ============================================================ */
+
+/* Icon lift on card hover */
+.course-card:hover .course-icon,
+.feature-box:hover .feature-icon {
+  animation: none; /* remove existing */
+  transform: scale(1.1) translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+/* Button shimmer effect on hover */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::after {
+  left: 150%;
+}
+
+/* ============================================================
+   7. NAVBAR ANIMATIONS
+   ============================================================ */
+
+.navbar {
+  animation: fadeInDown 0.5s ease 0s both;
+}
+
+/* Mobile nav link stagger */
+.mobile-nav.open .nav-link:nth-child(1) { animation: fadeInUp 0.4s ease 0.05s both; }
+.mobile-nav.open .nav-link:nth-child(2) { animation: fadeInUp 0.4s ease 0.1s  both; }
+.mobile-nav.open .nav-link:nth-child(3) { animation: fadeInUp 0.4s ease 0.15s both; }
+.mobile-nav.open .nav-link:nth-child(4) { animation: fadeInUp 0.4s ease 0.2s  both; }
+.mobile-nav.open .nav-link:nth-child(5) { animation: fadeInUp 0.4s ease 0.25s both; }
+
+/* ============================================================
+   8. PAGE HEADER ENTRY
+   ============================================================ */
+
+.page-header .breadcrumb {
+  animation: fadeIn 0.5s ease 0.2s both;
+}
+
+.page-header h1 {
+  animation: fadeInUp 0.7s ease 0.3s both;
+}
+
+.page-header p {
+  animation: fadeInUp 0.7s ease 0.5s both;
+}
+
+/* ============================================================
+   9. SKELETON / LOADING STATES
+   ============================================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-card) 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    var(--color-bg-card) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+/* ============================================================
+   10. REDUCED MOTION ACCESSIBILITY
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .anim-fade-up,
+  .anim-fade-in,
+  .anim-slide-left,
+  .anim-slide-right,
+  .anim-scale-in,
+  .stagger-children > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-badge,
+  .hero-title,
+  .hero-subtitle,
+  .hero-actions,
+  .hero-scroll,
+  .navbar,
+  .page-header .breadcrumb,
+  .page-header h1,
+  .page-header p {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

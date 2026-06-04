@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conosci il team di istruttori certificati di Power Gym Milano. Coach esperti in Boxe, Muay Thai, BJJ, MMA e Fitness Funzionale.">
+  <meta name="theme-color" content="#e63946">
+  <title>Il Nostro Team | Power Gym Milano</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* Extra styles specific to team page */
+    .team-achievements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      justify-content: center;
+      margin-bottom: var(--space-md);
+    }
+
+    .achievement-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(230,57,70,0.1);
+      border: 1px solid rgba(230,57,70,0.25);
+      border-radius: var(--radius-full);
+      padding: 0.2rem 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .team-specialties {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      justify-content: center;
+      margin-bottom: var(--space-md);
+    }
+
+    .specialty-tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 0.15rem 0.5rem;
+      font-size: var(--fs-xs);
+      color: var(--color-text-dim);
+    }
+
+    .values-section {
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      padding: var(--space-3xl);
+      margin-top: var(--space-4xl);
+      text-align: center;
+      border: 1px solid var(--color-border);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+
+    .value-item {
+      padding: var(--space-xl);
+    }
+
+    .value-number {
+      font-family: var(--font-heading);
+      font-size: var(--fs-3xl);
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+
+    .value-label {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: var(--fs-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .value-desc {
+      font-size: var(--fs-sm);
+      color: var(--color-text-dim);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo" aria-label="Power Gym – Homepage">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#e63946"/>
+            <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-main">POWER</span>
+            <span class="logo-sub">GYM</span>
+          </span>
+        </a>
+
+        <ul class="navbar-nav" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="corsi.html"       class="nav-link">Corsi</a></li>
+          <li><a href="istruttori.html"  class="nav-link active">Istruttori</a></li>
+          <li><a href="contatti.html"    class="nav-link">Contatti</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <a href="login.html" class="btn-login">ACCEDI</a>
+          <a href="index.html#cta-form" class="btn btn-primary btn-sm">ISCRIVITI ORA</a>
+        </div>
+
+        <button class="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+      <a href="index.html"      class="nav-link">Home</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="corsi.html"      class="nav-link">Corsi</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="istruttori.html" class="nav-link active">Istruttori</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="contatti.html"   class="nav-link">Contatti</a>
+      <div class="mobile-nav-actions">
+        <a href="login.html"          class="btn btn-outline">ACCEDI</a>
+        <a href="index.html#cta-form" class="btn btn-primary">ISCRIVITI ORA</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header" aria-label="Intestazione pagina istruttori">
+      <div class="container page-header-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Istruttori</span>
+        </nav>
+        <h1>IL NOSTRO <span>TEAM</span></h1>
+        <p>Coach certificati, campioni ed esperti appassionati. Pronti a guidarti nel tuo percorso.</p>
+      </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="section-padding" aria-label="I nostri istruttori">
+      <div class="container">
+
+        <div class="text-center anim-fade-up" style="margin-bottom: var(--space-3xl);">
+          <span class="section-label">Professionisti al tuo servizio</span>
+          <h2 class="section-title">I <span>COACH</span> DI POWER GYM</h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">
+            Ogni membro del nostro staff porta con sé anni di pratica agonistica,
+            competenze didattiche certificate e la passione per trasmettere questa disciplina.
+          </p>
+        </div>
+
+        <div class="team-grid stagger-children">
+
+          <!-- Coach 1 – Marco Ferretti (Head Coach, Boxe) -->
+          <article class="team-card" aria-label="Marco Ferretti, Head Coach Boxe">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #e63946, #c1121f);" aria-hidden="true">MF</div>
+            <h2 class="team-name">Marco Ferretti</h2>
+            <div class="team-role">Head Coach – Boxe</div>
+            <div class="team-exp" aria-label="20 anni di esperienza">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              20 anni di esperienza
+            </div>
+            <div class="team-achievements" aria-label="Titoli e certificazioni">
+              <span class="achievement-tag">3× Campione Regionale</span>
+              <span class="achievement-tag">FIJLKAM Cert.</span>
+            </div>
+            <div class="team-specialties" aria-label="Specializzazioni">
+              <span class="specialty-tag">Tecnica Pugistica</span>
+              <span class="specialty-tag">Pad Work</span>
+              <span class="specialty-tag">Sparring</span>
+              <span class="specialty-tag">Preparazione Gare</span>
+            </div>
+            <p class="team-bio">
+              Ex pugile professionista con oltre 60 incontri disputati. Marco ha iniziato a insegnare
+              nel 2010 e ha portato numerosi atleti al titolo nazionale amatoriale. Il suo approccio
+              tecnico rigoroso è bilanciato da una grande attenzione alle esigenze di ogni atleta.
+            </p>
+            <div class="team-social" aria-label="Social di Marco Ferretti">
+              <a href="#" aria-label="Instagram di Marco Ferretti">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook di Marco Ferretti">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Coach 2 – Sara Nakamura (Muay Thai) -->
+          <article class="team-card" aria-label="Sara Nakamura, Coach Muay Thai">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #f4a261, #e76f51);" aria-hidden="true">SN</div>
+            <h2 class="team-name">Sara Nakamura</h2>
+            <div class="team-role">Coach – Muay Thai &amp; MMA</div>
+            <div class="team-exp" aria-label="12 anni di esperienza">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              12 anni di esperienza
+            </div>
+            <div class="team-achievements">
+              <span class="achievement-tag">Campionessa Italiana</span>
+              <span class="achievement-tag">WBC Muay Thai</span>
+              <span class="achievement-tag">IFMA</span>
+            </div>
+            <div class="team-specialties">
+              <span class="specialty-tag">Clinch</span>
+              <span class="specialty-tag">Kicking Technique</span>
+              <span class="specialty-tag">Difesa Personale</span>
+              <span class="specialty-tag">Women's Program</span>
+            </div>
+            <p class="team-bio">
+              Italo-giapponese, Sara ha iniziato la sua carriera agonistica a Bangkok e ha
+              conquistato il titolo italiano WBC Muay Thai nel 2018. Specializzata anche nel
+              Women's Self-Defense, è il riferimento per tutte le atlete donne della palestra.
+              Il suo approccio è tecnico, inclusivo e sempre motivante.
+            </p>
+            <div class="team-social">
+              <a href="#" aria-label="Instagram di Sara Nakamura">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube di Sara Nakamura">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Coach 3 – Davide Costa (BJJ) -->
+          <article class="team-card" aria-label="Davide Costa, Coach BJJ e Grappling">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #1e6091, #2a9d8f);" aria-hidden="true">DC</div>
+            <h2 class="team-name">Davide Costa</h2>
+            <div class="team-role">Coach – BJJ &amp; Grappling</div>
+            <div class="team-exp" aria-label="15 anni di esperienza">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              15 anni di esperienza
+            </div>
+            <div class="team-achievements">
+              <span class="achievement-tag">Cintura Nera 2°</span>
+              <span class="achievement-tag">2× IBJJF Medaglia</span>
+              <span class="achievement-tag">ASD Cert.</span>
+            </div>
+            <div class="team-specialties">
+              <span class="specialty-tag">Guardia</span>
+              <span class="specialty-tag">Submission Wrestling</span>
+              <span class="specialty-tag">No-Gi</span>
+              <span class="specialty-tag">Agonismo IBJJF</span>
+            </div>
+            <p class="team-bio">
+              Cintura Nera 2° Dan con doppia esperienza Gi e No-Gi. Davide ha gareggiato in
+              Europa con l'IBJJF conquistando medaglie nelle categorie adulti e master.
+              Specializzato nello sviluppo tecnico di atleti in fascia agonistica. Imposta i
+              suoi corsi con focus su concetti profondi e applicazione pratica.
+            </p>
+            <div class="team-social">
+              <a href="#" aria-label="Instagram di Davide Costa">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook di Davide Costa">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Coach 4 – Elena Russo (Fitness & Yoga) -->
+          <article class="team-card" aria-label="Elena Russo, Coach Fitness Funzionale e Yoga Combattivo">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #6a0dad, #9b59b6);" aria-hidden="true">ER</div>
+            <h2 class="team-name">Elena Russo</h2>
+            <div class="team-role">Coach – Fitness &amp; Yoga Combattivo</div>
+            <div class="team-exp" aria-label="10 anni di esperienza">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              10 anni di esperienza
+            </div>
+            <div class="team-achievements">
+              <span class="achievement-tag">RYT-500 Yoga</span>
+              <span class="achievement-tag">NASM-CPT</span>
+              <span class="achievement-tag">CSEN Fitness</span>
+            </div>
+            <div class="team-specialties">
+              <span class="specialty-tag">HIIT</span>
+              <span class="specialty-tag">Mobilità Atletica</span>
+              <span class="specialty-tag">Recupero Attivo</span>
+              <span class="specialty-tag">Nutrizione Base</span>
+            </div>
+            <p class="team-bio">
+              Certificata RYT-500 per lo yoga e Personal Trainer NASM, Elena ha sviluppato
+              il metodo "Combat Yoga" specificamente per atleti da combattimento. I suoi
+              programmi di mobilità e recovery sono seguiti dagli atleti agonistici della
+              palestra per migliorare performance e prevenire infortuni.
+            </p>
+            <div class="team-social">
+              <a href="#" aria-label="Instagram di Elena Russo">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube di Elena Russo">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <!-- End team grid -->
+
+        <!-- Values / Approach section -->
+        <div class="values-section anim-fade-up">
+          <span class="section-label">Il Nostro Approccio</span>
+          <h3 class="section-title" style="font-size: var(--fs-2xl);">COSA CI <span>DIFFERENZIA</span></h3>
+          <div class="divider"></div>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-number">
+                <svg width="36" height="36" fill="none" stroke="#e63946" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17.4l-6.2 4.1 2.4-7.4L2 9.4h7.6z"/></svg>
+              </div>
+              <div class="value-label">Metodo Certificato</div>
+              <p class="value-desc">
+                Tutti i nostri istruttori seguono un programma didattico aggiornato annualmente
+                e sono certificati dalle principali federazioni sportive nazionali e internazionali.
+              </p>
+            </div>
+            <div class="value-item">
+              <div class="value-number">
+                <svg width="36" height="36" fill="none" stroke="#e63946" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="value-label">Attenzione Individuale</div>
+              <p class="value-desc">
+                Classi a numero chiuso per garantire feedback personalizzato. Il coach segue ogni
+                atleta nel suo percorso di crescita, adattando il programma alle sue necessità.
+              </p>
+            </div>
+            <div class="value-item">
+              <div class="value-number">
+                <svg width="36" height="36" fill="none" stroke="#e63946" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="value-label">Esperienza Agonistica</div>
+              <p class="value-desc">
+                I nostri coach non sono solo teorici: portano in palestra l'esperienza di decenni
+                di competizioni reali, a livello regionale, nazionale e internazionale.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA joining the team -->
+        <div class="text-center anim-fade-up" style="margin-top: var(--space-3xl);">
+          <h3 class="section-title" style="font-size: var(--fs-xl);">VUOI ALLENARTI CON I <span>MIGLIORI</span>?</h3>
+          <p class="text-muted" style="margin-bottom: var(--space-xl);">Prenota la tua prima lezione gratuita oggi stesso.</p>
+          <a href="index.html#cta-form" class="btn btn-primary btn-lg">
+            PRENOTA ORA
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          &nbsp;
+          <a href="contatti.html" class="btn btn-outline btn-lg">CONTATTACI</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Power Gym Homepage">
+            <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#e63946"/><path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/></svg>
+            <span style="font-family:var(--font-heading);letter-spacing:0.08em;">POWER <span style="color:var(--color-accent)">GYM</span></span>
+          </a>
+          <p>La palestra di arti marziali e fighting sports numero uno a Milano. Alleniamo corpo e mente dal 2009.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Link Rapidi</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="corsi.html">I Nostri Corsi</a>
+            <a href="istruttori.html">Il Nostro Team</a>
+            <a href="contatti.html">Contattaci</a>
+            <a href="login.html">Area Riservata</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Il Team</h4>
+          <nav class="footer-links">
+            <a href="#">Marco Ferretti – Boxe</a>
+            <a href="#">Sara Nakamura – Muay Thai</a>
+            <a href="#">Davide Costa – BJJ</a>
+            <a href="#">Elena Russo – Fitness</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <address class="footer-contact-list" style="font-style:normal;">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Via Roma 123, 20121 Milano</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.16 6.16l1-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+390212345678">+39 02 1234567</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Power Gym S.r.l. Tutti i diritti riservati.</p>
+        <nav aria-label="Link legali"><a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Cookie</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Torna in cima alla pagina" type="button">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contatta Power Gym Milano. Siamo in Via Roma 123, Milano. Telefono: +39 02 1234567. Compila il form per richiedere informazioni o prenotare la prima lezione gratuita.">
+  <meta name="theme-color" content="#e63946">
+  <title>Contatti | Power Gym Milano</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo" aria-label="Power Gym – Homepage">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#e63946"/>
+            <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-main">POWER</span>
+            <span class="logo-sub">GYM</span>
+          </span>
+        </a>
+
+        <ul class="navbar-nav" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="corsi.html"       class="nav-link">Corsi</a></li>
+          <li><a href="istruttori.html"  class="nav-link">Istruttori</a></li>
+          <li><a href="contatti.html"    class="nav-link active">Contatti</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <a href="login.html" class="btn-login">ACCEDI</a>
+          <a href="index.html#cta-form" class="btn btn-primary btn-sm">ISCRIVITI ORA</a>
+        </div>
+
+        <button class="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+      <a href="index.html"      class="nav-link">Home</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="corsi.html"      class="nav-link">Corsi</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="istruttori.html" class="nav-link">Istruttori</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="contatti.html"   class="nav-link active">Contatti</a>
+      <div class="mobile-nav-actions">
+        <a href="login.html"          class="btn btn-outline">ACCEDI</a>
+        <a href="index.html#cta-form" class="btn btn-primary">ISCRIVITI ORA</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header" aria-label="Intestazione pagina contatti">
+      <div class="container page-header-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Contatti</span>
+        </nav>
+        <h1>DOVE <span>TROVARCI</span></h1>
+        <p>Siamo a Milano, pronti ad accoglierti. Scrivici o chiamaci senza impegno.</p>
+      </div>
+    </section>
+
+    <!-- MAP PLACEHOLDER -->
+    <section aria-label="Mappa posizione palestra">
+      <div class="container" style="padding-top: var(--space-3xl);">
+        <div class="map-placeholder anim-fade-up" role="img" aria-label="Mappa della posizione di Power Gym in Via Roma 123, Milano">
+          <div class="map-pin" aria-hidden="true"></div>
+          <p class="map-label">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Power Gym &bull; Via Roma 123, 20121 Milano MI
+          </p>
+          <p style="font-size:var(--fs-xs);color:var(--color-text-dim);">In una vera implementazione: Google Maps o OpenStreetMap embed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="section-padding" aria-label="Informazioni di contatto e form">
+      <div class="container">
+
+        <div class="contact-layout">
+
+          <!-- Left: Contact info + hours -->
+          <aside aria-label="Informazioni di contatto">
+
+            <!-- Contact details card -->
+            <div class="contact-info anim-slide-left">
+              <h3>Informazioni</h3>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-content">
+                  <div class="label">Indirizzo</div>
+                  <div class="value">
+                    Via Roma 123<br>
+                    20121 Milano MI<br>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style="color:var(--color-accent);font-size:var(--fs-sm);">Apri in Maps →</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.16 6.16l1-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-content">
+                  <div class="label">Telefono</div>
+                  <div class="value">
+                    <a href="tel:+390212345678" style="color:var(--color-text);">+39 02 1234567</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-content">
+                  <div class="label">Email</div>
+                  <div class="value">
+                    <a href="mailto:info@powergym.it" style="color:var(--color-text);">info@powergym.it</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-content">
+                  <div class="label">Social Media</div>
+                  <div class="value">
+                    <div style="display:flex;gap:var(--space-sm);margin-top:var(--space-xs);">
+                      <a href="#" class="social-link" style="width:32px;height:32px;" aria-label="Instagram di Power Gym">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                      </a>
+                      <a href="#" class="social-link" style="width:32px;height:32px;" aria-label="Facebook di Power Gym">
+                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                      </a>
+                      <a href="#" class="social-link" style="width:32px;height:32px;" aria-label="YouTube di Power Gym">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Opening hours -->
+              <div class="contact-hours" style="margin-top: var(--space-xl);">
+                <h4>Orari di Apertura</h4>
+                <div class="hours-grid">
+                  <div class="hours-row">
+                    <span class="day">Lunedì – Venerdì</span>
+                    <span>07:00 – 22:00</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="day">Sabato</span>
+                    <span>08:00 – 18:00</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="day">Domenica</span>
+                    <span>09:00 – 13:00</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="day">Festivi</span>
+                    <span style="color:var(--color-accent);">Chiuso</span>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /.contact-info -->
+
+            <!-- How to reach us -->
+            <div class="contact-info anim-slide-left" style="margin-top:var(--space-xl);">
+              <h3>Come Raggiungerci</h3>
+              <ul style="display:flex;flex-direction:column;gap:var(--space-md);">
+                <li style="display:flex;align-items:flex-start;gap:var(--space-md);">
+                  <div style="width:36px;height:36px;background:rgba(230,57,70,0.15);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--color-accent);">M</div>
+                  <div>
+                    <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:2px;">Metro</div>
+                    <div style="font-size:var(--fs-sm);color:var(--color-text-muted);">Linea M3 – Fermata "Duomo" (5 min a piedi)</div>
+                  </div>
+                </li>
+                <li style="display:flex;align-items:flex-start;gap:var(--space-md);">
+                  <div style="width:36px;height:36px;background:rgba(230,57,70,0.15);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--color-accent);">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8zM5 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM19 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:2px;">Bus</div>
+                    <div style="font-size:var(--fs-sm);color:var(--color-text-muted);">Linee 15, 23, 27 – Fermata "Piazza Duomo"</div>
+                  </div>
+                </li>
+                <li style="display:flex;align-items:flex-start;gap:var(--space-md);">
+                  <div style="width:36px;height:36px;background:rgba(230,57,70,0.15);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--color-accent);">P</div>
+                  <div>
+                    <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:2px;">Parcheggio</div>
+                    <div style="font-size:var(--fs-sm);color:var(--color-text-muted);">Parcheggio convenzionato "ParkIN" a 200m. Mostra tessera Power Gym per sconto.</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </aside>
+
+          <!-- Right: Contact form -->
+          <div class="contact-form-wrapper anim-slide-right">
+            <h3>Scrivici un Messaggio</h3>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:var(--space-xl);">
+              Compila il form e ti risponderemo entro 24 ore lavorative.
+              Per urgenze chiama direttamente: <a href="tel:+390212345678" style="color:var(--color-accent);">+39 02 1234567</a>
+            </p>
+
+            <form id="contact-form" novalidate aria-label="Form di contatto">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-nome" class="form-label">Nome <span aria-hidden="true" style="color:var(--color-accent)">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-nome"
+                    name="nome"
+                    class="form-input"
+                    placeholder="Mario"
+                    data-rules="required,minLength:2"
+                    aria-required="true"
+                    autocomplete="given-name"
+                  >
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="contact-cognome" class="form-label">Cognome <span aria-hidden="true" style="color:var(--color-accent)">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-cognome"
+                    name="cognome"
+                    class="form-input"
+                    placeholder="Rossi"
+                    data-rules="required,minLength:2"
+                    aria-required="true"
+                    autocomplete="family-name"
+                  >
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email <span aria-hidden="true" style="color:var(--color-accent)">*</span></label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="mario.rossi@email.it"
+                    data-rules="required,email"
+                    aria-required="true"
+                    autocomplete="email"
+                  >
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="contact-telefono" class="form-label">Telefono</label>
+                  <input
+                    type="tel"
+                    id="contact-telefono"
+                    name="telefono"
+                    class="form-input"
+                    placeholder="+39 333 1234567"
+                    data-rules="phone"
+                    autocomplete="tel"
+                  >
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-oggetto" class="form-label">Oggetto <span aria-hidden="true" style="color:var(--color-accent)">*</span></label>
+                <select
+                  id="contact-oggetto"
+                  name="oggetto"
+                  class="form-input form-select"
+                  data-rules="required"
+                  aria-required="true"
+                >
+                  <option value="">Seleziona un argomento…</option>
+                  <option value="info-corsi">Informazioni sui Corsi</option>
+                  <option value="prova-gratuita">Prenota Prova Gratuita</option>
+                  <option value="abbonamento">Abbonamenti e Prezzi</option>
+                  <option value="istruttori">Informazioni sul Team</option>
+                  <option value="eventi">Eventi e Gare</option>
+                  <option value="altro">Altro</option>
+                </select>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-messaggio" class="form-label">Messaggio <span aria-hidden="true" style="color:var(--color-accent)">*</span></label>
+                <textarea
+                  id="contact-messaggio"
+                  name="messaggio"
+                  class="form-input form-textarea"
+                  placeholder="Scrivi qui il tuo messaggio… (min. 20 caratteri)"
+                  data-rules="required,minLength:20"
+                  aria-required="true"
+                  rows="5"
+                ></textarea>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-group">
+                  <input type="checkbox" id="contact-privacy" name="privacy" required>
+                  <span style="font-size:var(--fs-sm);color:var(--color-text-muted);">
+                    Ho letto e accetto la
+                    <a href="#" style="color:var(--color-accent);">Privacy Policy</a>
+                    e acconsento al trattamento dei dati personali.
+                    <span aria-hidden="true" style="color:var(--color-accent)">*</span>
+                  </span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                INVIA MESSAGGIO
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+
+              <div class="success-message" role="status" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+        <!-- /.contact-layout -->
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="padding-bottom: var(--space-4xl); background: var(--color-bg-section);" aria-label="Domande frequenti">
+      <div class="container" style="padding-top: var(--space-4xl);">
+        <div class="text-center anim-fade-up">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">DOMANDE <span>FREQUENTI</span></h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="anim-fade-up" style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:var(--space-md);">
+
+          <!-- FAQ items -->
+          <details style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-lg);cursor:pointer;">
+            <summary style="font-weight:700;color:var(--color-text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              Come posso prenotare la prima lezione gratuita?
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+              Puoi prenotare la tua prima lezione gratuita compilando il form in questa pagina,
+              quello nella homepage, oppure chiamandoci direttamente al +39 02 1234567.
+              Ti risponderemo entro 24 ore per concordare data e orario.
+            </p>
+          </details>
+
+          <details style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-lg);cursor:pointer;">
+            <summary style="font-weight:700;color:var(--color-text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              Devo portare attrezzatura per la prima lezione?
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+              No. Per la prima lezione è sufficiente indossare abbigliamento sportivo comodo.
+              La palestra mette a disposizione guantoni e protezioni in prestito per le prime lezioni.
+              Se decidi di continuare, avrai tutto il tempo per acquistare la tua attrezzatura personale
+              (consigliamo marchi specifici per ogni disciplina).
+            </p>
+          </details>
+
+          <details style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-lg);cursor:pointer;">
+            <summary style="font-weight:700;color:var(--color-text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              È possibile frequentare più corsi con un singolo abbonamento?
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+              Sì! Con l'abbonamento trimestrale puoi accedere a 2 discipline a scelta.
+              Con l'abbonamento annuale hai accesso illimitato a tutti i corsi della palestra.
+              Contattaci per scoprire il pacchetto più adatto alle tue esigenze.
+            </p>
+          </details>
+
+          <details style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-lg);cursor:pointer;">
+            <summary style="font-weight:700;color:var(--color-text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              I corsi sono adatti anche ai bambini?
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+              Assolutamente sì. Abbiamo classi specifiche per bambini dai 6 anni in su
+              (Boxe e BJJ Juniors). I corsi per bambini si svolgono in orari pomeridiani
+              e sono condotti da istruttori specializzati nell'insegnamento ai giovani atleti.
+              Chiamaci per avere il calendario completo.
+            </p>
+          </details>
+
+          <details style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-lg);cursor:pointer;">
+            <summary style="font-weight:700;color:var(--color-text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              È disponibile la sospensione dell'abbonamento?
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+              Sì, è possibile sospendere l'abbonamento per un massimo di 30 giorni all'anno
+              (previo certificato medico o richiesta motivata). La sospensione viene scalata
+              dalla durata residua dell'abbonamento. Contattaci in segreteria per attivare la sospensione.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Power Gym Homepage">
+            <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#e63946"/><path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/></svg>
+            <span style="font-family:var(--font-heading);letter-spacing:0.08em;">POWER <span style="color:var(--color-accent)">GYM</span></span>
+          </a>
+          <p>La palestra di arti marziali e fighting sports numero uno a Milano. Alleniamo corpo e mente dal 2009.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Link Rapidi</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="corsi.html">I Nostri Corsi</a>
+            <a href="istruttori.html">Il Nostro Team</a>
+            <a href="contatti.html">Contattaci</a>
+            <a href="login.html">Area Riservata</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>I Corsi</h4>
+          <nav class="footer-links">
+            <a href="corsi.html#boxe">Boxe</a>
+            <a href="corsi.html#muaythai">Muay Thai</a>
+            <a href="corsi.html#bjj">BJJ</a>
+            <a href="corsi.html#mma">MMA</a>
+            <a href="corsi.html#fitness">Fitness Funzionale</a>
+            <a href="corsi.html#yoga">Yoga Combattivo</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <address class="footer-contact-list" style="font-style:normal;">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Via Roma 123, 20121 Milano</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.16 6.16l1-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+390212345678">+39 02 1234567</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@powergym.it">info@powergym.it</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Power Gym S.r.l. Tutti i diritti riservati.</p>
+        <nav aria-label="Link legali"><a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Cookie</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Torna in cima alla pagina" type="button">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/form-validation.js" defer></script>
+</body>
+</html>

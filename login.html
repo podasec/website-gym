@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accedi alla tua area riservata Power Gym. Gestisci abbonamenti, prenota corsi e tieni traccia del tuo progresso.">
+  <meta name="theme-color" content="#e63946">
+  <title>Accedi | Power Gym Milano</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* -------------------------------------------------------
+       LOGIN PAGE – Additional styles
+    ------------------------------------------------------- */
+
+    /* Full-screen background with animated gradient */
+    .login-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 70% 80% at 20% 50%, rgba(230,57,70,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 30%, rgba(244,162,97,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 70% at 50% 80%, rgba(230,57,70,0.04) 0%, transparent 60%),
+        #0a0a0a;
+    }
+
+    .login-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 50px,
+          rgba(230,57,70,0.015) 50px,
+          rgba(230,57,70,0.015) 51px
+        );
+    }
+
+    /* Decorative floating elements */
+    .login-deco {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .login-deco-shape {
+      position: absolute;
+      border: 1px solid rgba(230,57,70,0.08);
+      border-radius: 50%;
+    }
+
+    .login-deco-shape:nth-child(1) {
+      width: 500px; height: 500px;
+      top: -100px; left: -150px;
+      animation: floatShape 10s ease-in-out infinite;
+    }
+
+    .login-deco-shape:nth-child(2) {
+      width: 300px; height: 300px;
+      bottom: -60px; right: -80px;
+      animation: floatShape 8s ease-in-out infinite;
+      animation-delay: 2s;
+      border-color: rgba(244,162,97,0.07);
+    }
+
+    .login-deco-shape:nth-child(3) {
+      width: 200px; height: 200px;
+      top: 40%; right: 10%;
+      animation: floatShape 12s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+
+    /* Social login buttons */
+    .social-login {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .btn-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-size: var(--fs-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .btn-social:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-1px);
+    }
+
+    /* Features list on left panel */
+    .login-features {
+      position: fixed;
+      left: 0; top: 0; bottom: 0;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--space-4xl);
+      background: linear-gradient(135deg, rgba(10,10,10,0.9) 0%, rgba(26,5,5,0.9) 100%);
+      backdrop-filter: blur(10px);
+      border-right: 1px solid var(--color-border);
+    }
+
+    .login-features-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      color: var(--color-text);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .login-features-title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: var(--space-md);
+    }
+
+    .login-features-title span {
+      color: var(--color-accent);
+    }
+
+    .login-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    .login-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+    }
+
+    .login-feature-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-md);
+      background: rgba(230,57,70,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    .login-feature-text .title {
+      font-weight: 700;
+      font-size: var(--fs-sm);
+      margin-bottom: 2px;
+    }
+
+    .login-feature-text .desc {
+      font-size: var(--fs-xs);
+      color: var(--color-text-dim);
+      line-height: 1.5;
+    }
+
+    /* Right panel (form) */
+    .login-right {
+      margin-left: 45%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xl);
+    }
+
+    /* Responsive: below 992px collapse to single column */
+    @media (max-width: 992px) {
+      .login-features {
+        display: none;
+      }
+
+      .login-right {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="login-bg" aria-hidden="true">
+    <div class="login-deco" aria-hidden="true">
+      <div class="login-deco-shape"></div>
+      <div class="login-deco-shape"></div>
+      <div class="login-deco-shape"></div>
+    </div>
+  </div>
+
+  <!-- Left panel: features (desktop only) -->
+  <aside class="login-features" aria-label="Vantaggi dell'area riservata" aria-hidden="true">
+    <a href="index.html" class="login-features-logo">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#e63946"/>
+        <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+      </svg>
+      POWER <span style="color:var(--color-accent)">GYM</span>
+    </a>
+
+    <h2 class="login-features-title">LA TUA AREA<br><span>RISERVATA</span></h2>
+    <p style="color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+      Accedi per gestire il tuo abbonamento, prenotare le lezioni e monitorare i tuoi progressi.
+    </p>
+
+    <div class="login-features-list">
+      <div class="login-feature-item">
+        <div class="login-feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div class="login-feature-text">
+          <div class="title">Prenota le Lezioni</div>
+          <div class="desc">Riserva il tuo posto nelle classi direttamente dal tuo profilo, 24/7.</div>
+        </div>
+      </div>
+
+      <div class="login-feature-item">
+        <div class="login-feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <div class="login-feature-text">
+          <div class="title">Monitora i Progressi</div>
+          <div class="desc">Tieni traccia dei tuoi allenamenti, delle lezioni frequentate e degli obiettivi raggiunti.</div>
+        </div>
+      </div>
+
+      <div class="login-feature-item">
+        <div class="login-feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="login-feature-text">
+          <div class="title">Gestisci l'Abbonamento</div>
+          <div class="desc">Visualizza, rinnova o modifica il tuo piano direttamente online.</div>
+        </div>
+      </div>
+
+      <div class="login-feature-item">
+        <div class="login-feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M18 20V10M12 20V4M6 20v-6"/>
+          </svg>
+        </div>
+        <div class="login-feature-text">
+          <div class="title">Statistiche Personali</div>
+          <div class="desc">Visualizza report dettagliati sulle tue sessioni di allenamento e i progressi nel tempo.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <blockquote style="margin-top:var(--space-3xl);border-left:3px solid var(--color-accent);padding-left:var(--space-md);">
+      <p style="font-style:italic;color:var(--color-text-muted);font-size:var(--fs-sm);line-height:1.7;">
+        "Il campione non è chi non cade mai, ma chi si rialza ogni volta."
+      </p>
+      <footer style="margin-top:var(--space-sm);font-size:var(--fs-xs);color:var(--color-text-dim);">— Bruce Lee</footer>
+    </blockquote>
+  </aside>
+
+  <!-- Right panel: login form -->
+  <div class="login-right">
+    <div class="login-card" style="animation: fadeInUp 0.6s ease;">
+
+      <!-- Logo (visible on mobile, hidden on desktop where left panel shows it) -->
+      <div class="login-logo" style="display:none;" id="mobile-logo">
+        <a href="index.html" aria-label="Power Gym – Homepage">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#e63946"/>
+            <path d="M10 22c0 3.314 2.686 6 6 6h4c3.314 0 6-2.686 6-6v-6a3 3 0 0 0-3-3h-1V11a2 2 0 0 0-4 0v2h-1a2 2 0 0 0-2 2v1h-.5A1.5 1.5 0 0 0 13 17.5v.5H12a2 2 0 0 0-2 2v2z" fill="white"/>
+          </svg>
+          <span style="font-family:var(--font-heading);letter-spacing:0.08em;font-size:var(--fs-xl);">
+            POWER <span style="color:var(--color-accent)">GYM</span>
+          </span>
+        </a>
+      </div>
+
+      <h1 class="login-title">Bentornato</h1>
+      <p class="login-subtitle">Accedi alla tua area riservata Power Gym</p>
+
+      <!-- Social login -->
+      <div class="social-login" aria-label="Accesso con account social">
+        <a href="#" class="btn-social" aria-label="Accedi con Google">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Continua con Google
+        </a>
+      </div>
+
+      <div class="login-divider">oppure</div>
+
+      <!-- Login form -->
+      <form id="login-form" novalidate aria-label="Form di accesso">
+
+        <div class="form-group">
+          <label for="login-email" class="form-label">
+            Email
+            <span aria-hidden="true" style="color:var(--color-accent)"> *</span>
+          </label>
+          <input
+            type="email"
+            id="login-email"
+            name="email"
+            class="form-input"
+            placeholder="mario.rossi@email.it"
+            data-rules="required,email"
+            aria-required="true"
+            autocomplete="email"
+            autofocus
+          >
+          <span class="form-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password" class="form-label">
+            Password
+            <span aria-hidden="true" style="color:var(--color-accent)"> *</span>
+          </label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              class="form-input"
+              placeholder="La tua password"
+              data-rules="required,password"
+              aria-required="true"
+              autocomplete="current-password"
+              style="padding-right: 3rem;"
+            >
+            <button class="password-toggle" type="button" aria-label="Mostra password" tabindex="0">
+              <!-- Eye open icon -->
+              <svg class="eye-open" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <!-- Eye closed icon (hidden initially) -->
+              <svg class="eye-closed" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <span class="form-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-xl);">
+          <label class="checkbox-group">
+            <input type="checkbox" id="login-remember" name="remember" value="1">
+            <span style="font-size:var(--fs-sm);color:var(--color-text-muted);">Ricordami</span>
+          </label>
+          <div class="forgot-password" style="margin:0;">
+            <a href="#">Password dimenticata?</a>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.9rem 1.5rem;font-size:var(--fs-md);">
+          ACCEDI
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+          </svg>
+        </button>
+
+        <div class="success-message" role="status" aria-live="polite"></div>
+
+      </form>
+
+      <div class="login-links" style="margin-top: var(--space-xl);">
+        Non hai ancora un account?
+        <a href="index.html#cta-form">Registrati gratis</a>
+      </div>
+
+      <div class="login-links" style="margin-top: var(--space-sm);">
+        <a href="index.html">← Torna alla Homepage</a>
+      </div>
+
+      <!-- Trust badges -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-lg);margin-top:var(--space-2xl);padding-top:var(--space-xl);border-top:1px solid var(--color-border);">
+        <div style="display:flex;align-items:center;gap:var(--space-xs);font-size:var(--fs-xs);color:var(--color-text-dim);">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          SSL Protetto
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--space-xs);font-size:var(--fs-xs);color:var(--color-text-dim);">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          GDPR Compliant
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--space-xs);font-size:var(--fs-xs);color:var(--color-text-dim);">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          24/7 Accesso
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Script to show logo on mobile -->
+  <script>
+    (function() {
+      function checkWidth() {
+        var logo = document.getElementById('mobile-logo');
+        if (logo) {
+          logo.style.display = window.innerWidth <= 992 ? 'block' : 'none';
+        }
+      }
+      checkWidth();
+      window.addEventListener('resize', checkWidth);
+    })();
+  </script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/form-validation.js" defer></script>
+</body>
+</html>

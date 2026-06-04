@@ -1,0 +1,579 @@
+/* ============================================================
+   POWER GYM - Responsive Stylesheet
+   responsive.css
+   Breakpoints: 1200px | 992px | 768px | 576px
+   ============================================================ */
+
+/* ============================================================
+   1. LARGE DESKTOP  (≤ 1200px)
+   ============================================================ */
+@media (max-width: 1200px) {
+  /* Container */
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: var(--space-2xl);
+  }
+
+  /* Features grid */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Team grid */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   2. TABLET / SMALL DESKTOP  (≤ 992px)
+   ============================================================ */
+@media (max-width: 992px) {
+  /* Typography scale-down */
+  :root {
+    --fs-5xl: 4rem;
+    --fs-4xl: 3rem;
+    --fs-3xl: 2.2rem;
+  }
+
+  /* Navbar: show hamburger */
+  .navbar-nav,
+  .navbar-actions .btn-primary {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .btn-login {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-visual {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about-badge-img {
+    right: 0; bottom: -10px;
+  }
+
+  .about-content .section-title {
+    text-align: center;
+  }
+
+  .about-content .section-label {
+    text-align: center;
+  }
+
+  .about-content .divider-left {
+    margin: 0 auto var(--space-xl);
+  }
+
+  /* Courses grid */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Features grid already 2-col from 1200px */
+
+  /* Contact layout */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  /* Schedule table */
+  .schedule-table th,
+  .schedule-table td {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--fs-xs);
+  }
+}
+
+/* ============================================================
+   3. MOBILE  (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Typography */
+  :root {
+    --fs-5xl: 3rem;
+    --fs-4xl: 2.5rem;
+    --fs-3xl: 2rem;
+    --fs-2xl: 1.75rem;
+  }
+
+  /* Section padding */
+  .section-padding {
+    padding: var(--space-3xl) 0;
+  }
+
+  /* Hero */
+  .hero-content {
+    padding: var(--space-lg);
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: var(--fs-base);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .stat-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Courses – single column */
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Features – single column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .testimonial-text {
+    font-size: var(--fs-base);
+  }
+
+  /* Schedule */
+  .schedule-table-wrapper {
+    font-size: var(--fs-xs);
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: var(--space-sm);
+    font-size: 0.7rem;
+  }
+
+  /* CTA form */
+  .cta-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-form .form-input,
+  .cta-form .btn {
+    width: 100%;
+    flex: none;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  /* Contact */
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Form rows become single column */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Map */
+  .map-placeholder {
+    height: 280px;
+  }
+
+  /* Login */
+  .login-card {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  /* Page header */
+  .page-header {
+    padding-top: calc(var(--navbar-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: var(--fs-2xl);
+  }
+
+  /* Team grid - 2 col then stack */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Scroll top button */
+  .scroll-top {
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+  }
+}
+
+/* ============================================================
+   4. SMALL MOBILE  (≤ 576px)
+   ============================================================ */
+@media (max-width: 576px) {
+  /* Container */
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* Navbar */
+  .navbar-inner {
+    padding: 0 var(--space-md);
+  }
+
+  .navbar-logo {
+    font-size: var(--fs-lg);
+  }
+
+  .logo-text .logo-sub {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: clamp(1.6rem, 10vw, 2.5rem);
+  }
+
+  .hero-badge {
+    font-size: 0.65rem;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  /* Stats */
+  .stat-number {
+    font-size: var(--fs-3xl);
+  }
+
+  /* Section */
+  .section-title {
+    font-size: var(--fs-xl);
+  }
+
+  /* Testimonial card */
+  .testimonial-card::before {
+    font-size: 5rem;
+    top: -10px;
+  }
+
+  /* Schedule – force scroll */
+  .schedule-table {
+    min-width: 600px;
+  }
+
+  /* Features */
+  .feature-box {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  /* Team – single column */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Course cards */
+  .course-card,
+  .course-card-detailed {
+    border-radius: var(--radius-md);
+  }
+
+  /* Login card */
+  .login-card {
+    padding: var(--space-xl) var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.7rem 1.4rem;
+    font-size: var(--fs-sm);
+  }
+
+  .btn-lg {
+    padding: 0.85rem 2rem;
+    font-size: var(--fs-base);
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    gap: var(--space-sm);
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-xs);
+  }
+
+  /* Footer */
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  /* Slider */
+  .slider-btn {
+    width: 36px; height: 36px;
+  }
+
+  /* CTA */
+  .cta-title {
+    font-size: var(--fs-xl);
+  }
+}
+
+/* ============================================================
+   5. MOBILE NAVIGATION OVERLAY
+   ============================================================ */
+
+/* Full-screen overlay nav for mobile */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 190;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  overflow: hidden;
+}
+
+.mobile-nav.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav .nav-link {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.mobile-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 3px;
+  background: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.mobile-nav .nav-link:hover,
+.mobile-nav .nav-link.active {
+  color: var(--color-accent);
+}
+
+.mobile-nav .nav-link:hover::after,
+.mobile-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.mobile-nav-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  margin-top: var(--space-xl);
+  width: 100%;
+  max-width: 280px;
+}
+
+.mobile-nav-actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Decorative line separators in mobile nav */
+.mobile-nav-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(230, 57, 70, 0.4);
+  margin: var(--space-sm) 0;
+}
+
+/* ============================================================
+   6. TABLET LANDSCAPE / SPECIFIC ADJUSTMENTS
+   ============================================================ */
+@media (min-width: 577px) and (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-item {
+    border-bottom: none;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: block;
+  }
+}
+
+/* ============================================================
+   7. TOUCH DEVICE ENHANCEMENTS
+   ============================================================ */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover transforms on touch to avoid stuck states */
+  .course-card:hover,
+  .feature-box:hover,
+  .team-card:hover,
+  .course-card-detailed:hover {
+    transform: none;
+  }
+
+  /* Larger tap targets */
+  .nav-link {
+    padding: var(--space-sm) 0;
+  }
+
+  .filter-btn {
+    min-height: 44px;
+  }
+
+  .btn {
+    min-height: 44px;
+  }
+
+  .slider-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .slider-dot {
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+/* ============================================================
+   8. PRINT STYLES
+   ============================================================ */
+@media print {
+  .navbar,
+  .hero-scroll,
+  .slider-controls,
+  .scroll-top,
+  .cta-section,
+  .hamburger,
+  .mobile-nav {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .hero {
+    min-height: auto;
+    page-break-after: avoid;
+  }
+
+  .section-title,
+  .hero-title {
+    color: black;
+  }
+}
